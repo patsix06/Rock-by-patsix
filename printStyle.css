@@ -1,0 +1,159 @@
+@page {
+  margin: 2cm;
+}
+
+html, body {
+  background: #fff;
+  color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0 0.3cm;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12pt;
+  line-height: 1.5;
+}
+
+header {
+  margin-bottom: 1cm;
+  padding-bottom: 0.3cm;
+  border-bottom: 1pt solid #000;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28pt;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-size: 20pt;
+  margin-top: 0.8cm;
+  border-left: 3pt solid #000;
+  padding-left: 0.3cm;
+}
+
+h3 {
+  font-size: 15pt;
+  margin-top: 0.6cm;
+}
+
+h2, h3, caption {
+  break-after: avoid;
+}
+
+p {
+  text-align: justify;
+  orphans: 3;
+  widows: 3;
+}
+
+ol, ul {
+  margin-left: 0.8cm;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 7cm;
+  height: auto;
+  margin: 0.4cm 0;
+  border: 0.5pt solid #000;
+  break-inside: avoid;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.6cm 0;
+}
+
+caption {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0.2cm;
+}
+
+th, td {
+  padding: 0.15cm 0.25cm;
+  border: 2pt solid #000;
+  text-align: left;
+}
+
+thead th {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 3pt solid #000;
+}
+
+tr {
+  break-inside: avoid;
+}
+
+tfoot td {
+  font-style: italic;
+  text-align: center;
+}
+
+footer {
+  margin-top: 1cm;
+  padding-top: 0.3cm;
+  border-top: 0.5pt solid #000;
+  text-align: center;
+  font-size: 10pt;
+  display: none;
+}
+
+nav .reklama {
+  display: none;
+}
+
+nav {
+  display: none;
+}
+
+iframe {
+  display: none;
+}
+
+.odkaz-playlist a::after {
+  content: " (" attr(href) ")";
+}
+
+.reklama {
+  display: none;
+}
+
+.gitara {
+  display: none;
+}
+
+.opinion {
+  margin-bottom: 0.4cm;
+  padding: 0.3cm;
+  border: 0.5pt solid #000;
+  break-inside: avoid;
+}
+
+#nazory {
+  display: none;
+}
+
+.tabulka-obal, table {
+  break-inside: avoid;
+}
+
+thead {
+  display: table-header-group;
+}
+
+.odkaz-playlist{
+  display: none;
+}

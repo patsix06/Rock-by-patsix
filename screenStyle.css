@@ -1,0 +1,490 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cervena: #e63946;
+  --cervena-tmava: #b02a35;
+  --text: #ececec;
+  --pozadie-obsahu: rgba(15, 15, 18, 0.92);
+}
+
+html {
+  background-image: url("fig/pozadie.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
+  width: 100%;
+  min-width: 15rem;
+  max-width: 46.875rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1.875rem 1.875rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--pozadie-obsahu);
+  color: var(--text);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.875rem;
+  border-bottom: 3px solid var(--cervena);
+}
+
+h1 {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.375rem;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(230, 57, 70, 0.6);
+}
+
+nav {
+  text-align: center;
+  margin-top: 0.9375rem;
+}
+
+nav a, .odkaz-playlist a, button {
+  display: inline-block;
+  margin: 0.3125rem 0.25rem;
+  padding: 0.5rem 1.25rem;
+  color: var(--text);
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  border: 2px solid var(--cervena);
+  border-radius: 4px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button{
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.odkaz-playlist {
+  text-align: center;
+}
+
+nav a:hover, .odkaz-playlist a:hover, button:hover {
+  background-color: var(--cervena);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0.9375rem;
+  padding-left: 0.75rem;
+  border-left: 5px solid var(--cervena);
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4rem;
+  color: var(--cervena);
+  margin: 1.875rem 0 0.625rem;
+  letter-spacing: 0.0625rem;
+}
+
+p {
+  margin-bottom: 0.9375rem;
+  text-align: justify;
+}
+
+ol, ul {
+  margin-left: 1.5625rem;
+  margin-bottom: 1.25rem;
+  list-style-position: inside;
+}
+
+li {
+  margin-bottom: 0.375rem;
+}
+
+li::marker {
+  color: var(--cervena);
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.875rem auto 0.625rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--cervena-tmava);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+footer {
+  margin-top: 2.5rem;
+  padding-top: 0.9375rem;
+  border-top: 1px solid #333;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.zoznamy {
+  display: grid;
+  grid-template-columns: 1fr minmax(10rem, 35%);
+  gap: 1.5625rem;
+  align-items: start;
+}
+
+.zoznamy-text {
+  min-width: 0;
+}
+
+.obrazky {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 1.875rem;
+}
+
+.obrazky img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.tabulka-obal {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5625rem 0;
+}
+
+caption {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.0625rem;
+  color: var(--cervena);
+  margin-bottom: 0.625rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #333;
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--cervena);
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.0625rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+tbody td[rowspan] {
+  font-weight: 600;
+  color: #fff;
+  vertical-align: middle;
+}
+
+tfoot td {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+  text-align: center;
+}
+
+.tabulka_obrazok {
+  max-width: 25rem;
+}
+
+.gitara {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.paticka {
+  margin: 0;
+  padding: 0;
+}
+
+.mail a {
+  color: var(--cervena);
+  text-decoration: none;
+}
+
+@keyframes objavenie {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+article {
+  animation: objavenie 0.8s ease-out;
+}
+
+@keyframes ziara {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(230, 57, 70, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 35px rgba(230, 57, 70, 1);
+  }
+}
+
+h1 {
+  animation: ziara 3s ease-in-out infinite;
+}
+
+img {
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 1.25rem 1rem;
+  }
+
+  h1 {
+    letter-spacing: 0.15em;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.4rem 0;
+  }
+
+  th, td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .zoznamy {
+    grid-template-columns: 1fr;
+  }
+
+  .obrazky {
+    width: 100%;
+    max-width: 18.75rem;
+    margin: 1.25rem auto 0;
+  }
+}
+
+.reklama {
+  display: none;
+}
+
+@media (min-width: 80rem) {
+  .reklama {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 8rem;
+    width: 10rem;
+    min-height: 25rem;
+    padding: 1rem;
+    text-align: center;
+    color: #888;
+    background-color: rgba(15, 15, 18, 0.75);
+    border: 2px dashed var(--cervena-tmava);
+    border-radius: 0.5rem;
+  }
+
+  .reklama-vlavo {
+    left: calc(50% - 23.4375rem - 1.5rem - 10rem);
+  }
+
+  .reklama-vpravo {
+    left: calc(50% + 23.4375rem + 1.5rem);
+  }
+}
+
+#nazory legend {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0.5rem;
+}
+
+#nazory {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+#nazory h3 {
+  text-align: center;
+}
+
+#opinionForm, #opinionForm * {
+  box-sizing: border-box;
+}
+
+#opinionForm p {
+  margin: 0 0 1rem;
+}
+
+#opinionForm label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+#opinionForm input[type="radio"] + label, #opinionForm input[type="checkbox"] + label {
+  display: inline;
+  font-weight: 400;
+  margin-left: 0.4rem;
+}
+
+#opinionForm input[type="text"],
+#opinionForm input[type="email"],
+#opinionForm input[type="url"],
+#opinionForm textarea {
+  width: 100%;
+  padding: 0.7rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid #888;
+  border-radius: 6px;
+}
+
+#opinionForm textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#opinionForm fieldset {
+  margin: 0 0 1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid #888;
+  border-radius: 6px;
+  min-width: 0;
+}
+
+#opinionForm legend {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+#opinionForm button {
+  width: 100%;
+  margin-bottom: 0.6rem;
+  padding: 0.8rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  #opinionForm button {
+    width: auto;
+    min-width: 140px;
+    margin-right: 0.6rem;
+  }
+}
+
+#opinionForm input:required, #opinionForm textarea:required {
+  border-left: 5px solid #e67e22;
+}
+
+#opinionForm input:optional, #opinionForm textarea:optional {
+  border-left: 5px solid #bbb;
+}
+
+#opinionForm input:user-valid, #opinionForm textarea:user-valid {
+  border-color: #2ecc71;
+  background-color: #f0fff4;
+}
+
+#opinionForm input:user-invalid, #opinionForm textarea:user-invalid {
+  border-color: #e74c3c;
+  background-color: #fff0f0;
+}
+
+/* ===== Zobrazené názory ===== */
+#zobrazene-nazory {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto 0;
+}
+
+.opinion {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #888;
+    border-radius: 6px;
+    overflow-wrap: anywhere;   /* dlhé URL a slová nepretečú mimo displeja */
+}
+
+.opinion h4 {
+    margin: 0 0 0.5rem;
+}
+
+.opinion-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+}
+
+.opinion ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+
+.playlist iframe {
+  display: block;
+  width: 100%;
+  min-height: 22rem;
+  border: 0;
+  border-radius: 0.75rem;
+}
